@@ -7,6 +7,7 @@ Easy complaint submission
 Real-time complaint tracking
 Transparent grievance resolution
 Faster response and accountability.
+
 **Objectives**
 To provide a user-friendly platform for complaint registration
 To enable real-time complaint tracking
