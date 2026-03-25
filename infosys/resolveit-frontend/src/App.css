@@ -1,0 +1,497 @@
+/* ===================== Global Reset ===================== */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f6fb;
+  color: #333;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* ===================== Auth Pages ===================== */
+.auth-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  padding: 20px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  min-height: 600px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.8s ease;
+}
+
+.left {
+  width: 50%;
+  padding: 50px;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.sidebar-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.features {
+  margin-top: 30px;
+  padding: 0;
+}
+
+.features li {
+  list-style: none;
+  font-size: 16px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.features li:hover {
+  transform: translateX(8px);
+  cursor: default;
+}
+
+.right {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9fafb;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+.form-box h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-box p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(6, 182, 212, 0.8);
+}
+
+.google-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #db4437;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background: #c13527;
+  transform: scale(1.03);
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.bottom-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.bottom-text a {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.bottom-text a:hover {
+  text-decoration: underline;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.success-msg {
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ===================== LandingPage CSS ===================== */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.nav-buttons a {
+  margin-left: 15px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  border: 1px solid #fff;
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.nav-buttons a:hover {
+  background-color: #3b82f6;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #e0f2fe;
+}
+
+.hero h2 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  padding: 14px 35px;
+  background: #fff;
+  color: #4f46e5;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+section {
+  padding: 55px 20px;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1f2937;
+}
+
+.testimonials {
+  padding: 40px 20px;
+}
+
+/* Dashboard Preview Cards */
+.screenshot-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.screenshot-card p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Cards */
+.feature-cards,
+.steps,
+.screenshot-cards,
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.feature-card,
+.step-card,
+.screenshot-card,
+.testimonial-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  min-width: 240px;
+  max-width: 260px;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover,
+.step-card:hover,
+.screenshot-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.step-card span {
+  font-size: 28px;
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #3b82f6, #4f46e5);
+  color: #fff;
+  padding: 70px 20px;
+  border-radius: 30px;
+  margin: 60px 50px;
+}
+
+.cta-section .cta-btn {
+  background: #fff;
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 20px;
+  background: #4f46e5;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 768px) {
+  .features,
+  .steps,
+  .screenshot-cards,
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cta-section {
+    margin: 40px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+}
+
+/* ===================== Animations ===================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stats-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 50px 20px;
+  background: #f8fbff;
+}
+
+.stat-card {
+  background: #ffffff;
+  min-width: 220px;
+  padding: 30px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.14);
+}
+
+.stat-icon {
+  font-size: 36px;
+  color: #4f46e5;
+  margin-bottom: 12px;
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 15px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.screenshot-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.screenshot-card p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
